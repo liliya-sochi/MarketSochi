@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liliya-sochi/marketsochi-config
+          default-label: main
+          username: liliya-sochi
+          password: 12345678
+          clone-on-start: true
+
+#eureka:
+#  client:
+#    service-url:
+#      default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
